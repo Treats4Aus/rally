@@ -1,0 +1,33 @@
+<div class="username-form">
+    <form [formGroup]="usernameForm" (ngSubmit)="onSubmitUsername()">
+        <mat-form-field>
+            <mat-label for="display-name">New display name</mat-label>
+            <input matInput id="display-name" type="text" formControlName="username" />
+        </mat-form-field>
+        <span class="buttons">
+            <button mat-raised-button color="primary" type="submit">Change display name</button>
+        </span>
+    </form>
+</div>
+<div class="password-form">
+    <form [formGroup]="passwordForm" (ngSubmit)="onSubmitPassword()">
+        <mat-form-field>
+            <mat-label for="old-password">Current password</mat-label>
+            <input matInput id="old-password" type="password" formControlName="oldPassword" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="password">New password</mat-label>
+            <input matInput id="password" type="password" formControlName="password" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="password-confirm">Password confirm</mat-label>
+            <input matInput id="password-confirm" type="password" formControlName="passwordConfirm" />
+        </mat-form-field>
+        <span class="buttons">
+            <button mat-raised-button color="primary" type="submit">Change password</button>
+        </span>
+    </form>
+</div>
+<div class="delete-button">
+    <button mat-stroked-button color="warn" (click)="deleteAccount()">Delete account</button>
+</div>

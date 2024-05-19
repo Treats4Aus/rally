@@ -1,0 +1,35 @@
+h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 42pt;
+}
+
+.group-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+form {
+    display: inline-grid;
+    width: 50%;
+    align-self: center;
+}
+
+button {
+    width: 40%;
+}
+
+@media screen and (max-width: 576px) {
+    form {
+        width: 80%;
+    }
+
+    button {
+        width: 60%;
+    }
+}

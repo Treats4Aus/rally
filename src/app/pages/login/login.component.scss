@@ -1,0 +1,43 @@
+.login-form {
+    margin-top: 180px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main-component {
+    display: flex;
+}
+
+.logo, .login-form {
+    flex: 1;
+}
+
+img {
+    width: 80%;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+form {
+    display: inline-grid;
+    width: 80%;
+    align-self: center;
+}
+
+button {
+    width: 40%;
+}
+
+@media screen and (max-width: 576px) {
+    .main-component {
+        display: block;
+    }
+
+    .login-form {
+        margin-top: 0;
+    }
+}

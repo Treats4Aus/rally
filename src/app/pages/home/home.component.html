@@ -1,0 +1,20 @@
+<h1>Your groups</h1>
+<div class="group-list">
+    <ng-container *ngFor="let group of myGroups">
+        <mat-card class="group-item" (click)="groupClicked(group.id)">
+            <mat-card-content>
+                <div fxFlex fxLayout>
+                    <div>
+                        <h2>{{group.name}}</h2>
+                        <p>{{group.memberCount}}</p>
+                    </div>
+                    <div fxFlex fxLayout fxLayoutAlign="flex-end">
+                        <div class="group-event-time">
+                            {{group.eventDate | dateFormat}}
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </ng-container>
+</div>

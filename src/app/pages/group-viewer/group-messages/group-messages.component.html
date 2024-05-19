@@ -1,0 +1,14 @@
+<div>
+    <cdk-virtual-scroll-viewport #virtualScroll class="messages-viewport" itemSize="16">
+        <div *cdkVirtualFor="let message of messages">
+            <mat-card [ngClass]="message.senderId === currentUser.uid ? 'own-message' : 'other-message'">
+                <mat-card-header>
+                    <mat-card-subtitle>{{message.senderDisplayName}} | {{message.sentTimeStamp | dateFormat}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <h3>{{message.text}}</h3>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>

@@ -1,0 +1,25 @@
+<mat-sidenav-container>
+    <mat-sidenav position="end" #sidenav>
+        <app-menu [currentPage]="page" [currentUser]="currentUser" (closeSidenav)="closeSidenav($event, sidenav)" (onLogout)="logout($event)" />
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <div class="mat-h1 toolbar-title"><a routerLink="/home">Rally</a></div>
+            <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+                <ul class="navigation-items" fxLayout fxLayoutGap="16px">
+                    <li *ngIf="!currentUser"><a routerLink="/login">Login</a></li>
+                    <li *ngIf="!currentUser"><a routerLink="/signup">Sign up</a></li>
+                    <li *ngIf="currentUser"><a routerLink="/create">New group</a></li>
+                    <li *ngIf="currentUser"><a routerLink="/profile">Profile</a></li>
+                    <li *ngIf="currentUser"><a routerLink="/login" (click)="logout()">Logout</a></li>
+                </ul>
+            </div>
+            <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-xs>
+                <button mat-icon-button (click)="toggleSidenav(sidenav)">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar>
+        <router-outlet />
+    </mat-sidenav-content>
+</mat-sidenav-container>

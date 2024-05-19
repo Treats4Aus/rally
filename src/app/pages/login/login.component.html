@@ -1,0 +1,20 @@
+<div class="main-component">
+    <div class="logo">
+        <img src="../../../assets/rally_logo.png" />
+    </div>
+    <div class="login-form">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-label for="email">Email</mat-label>
+                <input matInput id="email" type="text" formControlName="email" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="password">Password</mat-label>
+                <input matInput id="password" type="password" formControlName="password" />
+            </mat-form-field>
+            <span class="buttons">
+                <button mat-raised-button color="primary" type="submit">Login</button>
+            </span>
+        </form>
+    </div>
+</div>

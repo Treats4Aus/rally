@@ -1,0 +1,18 @@
+.main-component {
+    height: 100%;
+    display: flex;
+}
+
+.details {
+    flex: 1;
+}
+
+.messages {
+    flex: 2;
+}
+
+@media screen and (max-width: 576px) {
+    .main-component {
+        display: block;
+    }
+}

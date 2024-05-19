@@ -1,0 +1,15 @@
+mat-card {
+    max-height: 50vh;
+    background-color: #F57C00;
+    margin: 15px;
+}
+
+p {
+    word-wrap: normal;
+}
+
+@media screen and (max-width: 576px) {
+    mat-card {
+        max-height: 30vh;
+    }
+}

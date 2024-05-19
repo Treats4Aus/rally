@@ -1,0 +1,22 @@
+<mat-nav-list>
+    <a mat-list-item *ngIf="!currentUser" routerLink="/login" (click)="close()">
+        <mat-icon>login</mat-icon>
+        <span>Login</span>
+    </a>
+    <a mat-list-item *ngIf="!currentUser" routerLink="/signup" (click)="close()">
+        <mat-icon>person</mat-icon>
+        <span>Sign up</span>
+    </a>
+    <a mat-list-item *ngIf="currentUser" routerLink="/create" (click)="close()">
+        <mat-icon>group_add</mat-icon>
+        <span>New Group</span>
+    </a>
+    <a mat-list-item *ngIf="currentUser" routerLink="/profile" (click)="close()">
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+    </a>
+    <a mat-list-item *ngIf="currentUser" routerLink="/login" (click)="close(); logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+    </a>
+</mat-nav-list>

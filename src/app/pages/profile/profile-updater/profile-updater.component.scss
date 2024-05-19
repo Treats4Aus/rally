@@ -1,0 +1,29 @@
+.username-form, .password-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.delete-button {
+    text-align: center;
+}
+
+form {
+    display: inline-grid;
+    width: 80%;
+    align-self: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+button {
+    width: 40%;
+}
+
+@media screen and (max-width: 576px) {
+    button {
+        width: 60%;
+    }
+}

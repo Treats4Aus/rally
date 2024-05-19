@@ -1,0 +1,26 @@
+<div class="main-component">
+    <h1>New group</h1>
+    <div class="group-form">
+        <form [formGroup]="groupForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-label for="groupName">Group name</mat-label>
+                <input matInput id="groupName" type="text" formControlName="name" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="groupDescription">Description</mat-label>
+                <textarea matInput id="groupDescription" formControlName="description"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="memberList">Add members (one per line)</mat-label>
+                <textarea matInput id="memberList" placeholder="Ex. person1@example.com" formControlName="members"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Choose a date</mat-label>
+                <input matInput type="datetime-local" formControlName="eventDate">
+            </mat-form-field>
+            <span class="buttons">
+                <button mat-raised-button color="primary" type="submit">Create group</button>
+            </span>
+        </form>
+    </div>
+</div>

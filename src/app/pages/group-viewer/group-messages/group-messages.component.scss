@@ -1,0 +1,24 @@
+.messages-viewport {
+    width: 90%;
+    height: 75vh;
+    margin: 10px auto 0 auto;
+}
+
+mat-card {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.own-message {
+    background-color: #FFA000;
+}
+
+.other-message {
+    background-color: rgb(230, 230, 230);
+}
+
+@media screen and (max-width: 576px) {
+    .messages-viewport {
+        height: 60vh;
+    }
+}

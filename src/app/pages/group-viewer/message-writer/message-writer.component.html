@@ -1,0 +1,12 @@
+<div class="writer">
+    <form [formGroup]="messageForm" (ngSubmit)="onSend()">
+        <mat-form-field class="message-input">
+            <input matInput type="text" placeholder="Send a message" formControlName="messageText" />
+        </mat-form-field>
+        <span class="buttons">
+            <button mat-mini-fab color="white" type="submit">
+                <mat-icon>send</mat-icon>
+            </button>
+        </span>
+    </form>
+</div>

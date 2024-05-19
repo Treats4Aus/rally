@@ -1,0 +1,9 @@
+<div class="main-component">
+    <div class="details">
+        <app-group-details [group]="currentGroup" />
+    </div>
+    <div class="messages">
+        <app-group-messages [messages]="messages" />
+        <app-message-writer (messageSent)="storeMessage($event)" />
+    </div>
+</div>
